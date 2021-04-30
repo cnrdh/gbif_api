@@ -36,8 +36,6 @@ if (import.meta.main) {
       console.log(helptext);
       exit(0);
     }
-    console.warn(await requestAPIPermission());
-
     await assertGranted(
       requestAPIPermission(),
       `Cannot run without permissions to access GBIF Species API ${base}`,
